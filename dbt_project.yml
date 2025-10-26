@@ -1,0 +1,29 @@
+# dbt_project.yml
+name: 'conversion_user_journey' 
+version: '1.0.0'
+config-version: 2
+
+profile: 'default'
+
+# Standard paths
+model-paths: ["models"]
+# ... (rest of standard paths) ...
+
+# ----------------- CRITICAL CONFIGURATION -----------------
+models:
+  conversion_user_journey: # <<-- Your project name
+    
+    # 1. Staging models will be views in the 'staging' dataset
+    staging:
+      +schema: staging      # <-- FORCES output to the 'staging' dataset
+      +materialized: view 
+      
+    # 2. Core models will be tables in the 'core' dataset
+    core:
+      +schema: core         # <-- FORCES output to the 'core' dataset
+      +materialized: table
+      
+    # 3. Define the 'marts' directory output (for future use)
+    marts:
+      +schema: marts
+      +materialized: view
