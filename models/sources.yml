@@ -1,0 +1,10 @@
+# models/sources.yml
+version: 2
+
+sources:
+  - name: google_analytics 
+    database: bigquery-public-data 
+    schema: google_analytics_sample 
+    tables:
+      - name: ga_sessions_sample # The public table name
+        identifier: ga_sessions_20170801 # single day's table for quick testing
