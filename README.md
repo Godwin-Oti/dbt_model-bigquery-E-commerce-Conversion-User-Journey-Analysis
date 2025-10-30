@@ -75,7 +75,7 @@ This project follows a **three-layer Medallion architecture** to ensure scalabil
   <img src="Screenshot 2025-10-28 174805.png" alt="dbt Models" width="700"/>
 </p>
 
-**Figure 2:** *dbt Models showing analytic engineering workflow*
+**Figure 2:** *dbt Models showing the three-layer Medallion architecture*
 ---
 
 ## ⚙️ 6. Installation and Setup (dbt Cloud Focus)
@@ -106,3 +106,4 @@ git clone git@github.com:your-organization/conversion_user_journey.git
 
 
 **License**: MIT
+
