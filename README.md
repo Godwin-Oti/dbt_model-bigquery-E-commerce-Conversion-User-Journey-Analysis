@@ -71,6 +71,11 @@ This project follows a **three-layer Medallion architecture** to ensure scalabil
 | **analytics_dev_core (Fact Table)** | `fact_sessions`           | `table`             | **Dimensional Modeling:** Aggregates hits back to the session level, calculates conversion flags, total revenue, and device metadata. Partitioned & clustered for performance.  |
 | **analytics_dev_mart**              | `mart_conversion_summary` | `view`              | **Business Layer:** Aggregates by `device_category` and `traffic_medium`, calculating **AOV** and **Conversion Rate**. Acts as the **Single Source of Truth** for BI reporting. |
 
+<p align="center">
+  <img src="Screenshot 2025-10-28 174805.png" alt="dbt Models" width="700"/>
+</p>
+
+**Figure 2:** *dbt Models showing analytic engineering workflow*
 ---
 
 ## ⚙️ 6. Installation and Setup (dbt Cloud Focus)
@@ -98,5 +103,6 @@ git clone git@github.com:your-organization/conversion_user_journey.git
 **Author**: Godwin Oti 
 
 **Contact**: godwinotigo@gmail.com 
+
 
 **License**: MIT
